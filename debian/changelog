@@ -1,0 +1,259 @@
+keychain (2.8.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Set DFSG build since the upstream tarball have changed a lot
+  * Updated debhelper dependecy to be >= 10
+  * Updated compat to version 10
+  * Updated Standards-Version to 4.1.1
+  * Updated Priority to optional
+  * Set Multi-Arch as foreign
+  * Added debian/watch and uscan script to get releases from GitHub
+  * New maintainer. Closes: #867749
+
+ -- Paulo Vital <pvital@gmail.com>  Thu, 16 Nov 2017 11:50:24 -0200
+
+keychain (2.8.2-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream release.  (Closes: #847445)
+    - Fixes bashisms causing syntax errors.  (Closes: #815510)
+    - Cleanly separates the --help output for --stop and
+      --systemd.  (Closes: #800555)
+  * Convert to 3.0 (quilt) source format to avoid making this
+    a native package again.  (see #800555)
+  * Convert d/rules to dh7-style given that upstream removed
+    its build system.
+
+ -- Niels Thykier <niels@thykier.net>  Sat, 31 Dec 2016 22:35:22 +0000
+
+keychain (2.8.1-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream release.  (Closes: #780012)
+    - Supports OpenSSH 6.9 output.  (Closes: #796398)
+  * Replace deprecated dh_clean -k with dh_prep
+  * README.examples and keychain.xsession are no longer
+    shipped as upstream has removed them without any
+    apparent replacement.  (Closes: #577246)
+  * Remove versioned dependency on grep since it was satisfied
+    in "oldoldstable".
+  * Add a Homepage field to link to the upstream project page.
+  * Add now mandatory build-arch and build-indep targets.
+  * Bump debhelper compat to 9 - none of the compat changes
+    affects the package.
+
+ -- Niels Thykier <niels@thykier.net>  Sat, 05 Sep 2015 09:04:43 +0200
+
+keychain (2.7.1-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Cesar Mendoza <mendoza@debian.org>  Thu, 11 Oct 2011 19:01:34 -0600
+
+keychain (2.6.8-3) unstable; urgency=low
+
+  * Fixed url in the man page
+
+ -- Cesar Mendoza <mendoza@debian.org>  Thu, 18 Jun 2009 11:02:00 -0600
+
+keychain (2.6.8-2) unstable; urgency=low
+
+  * added suggests for package ssh-askpass. Closes: #462080 
+  * superfluous continuation lines in manpage example fixed. Closes: #440128
+  * Assumes tty uses ANSI escape sequences fixed. Closes: #440129
+  * Thanks to Gregory Colpart, Trent Buck and Steven Cole for the input.
+
+ -- Cesar Mendoza <mendoza@debian.org>  Thu, 03 Apr 2008 09:04:28 -0600
+
+keychain (2.6.8-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Cesar Mendoza <mendoza@debian.org>  Tue, 24 Aug 2007 15:32:54 -0600
+
+
+keychain (2.6.6-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Cesar Mendoza <mendoza@debian.org>  Tue, 21 Sep 2006 15:28:05 -0600
+
+
+keychain (2.6.2-1) unstable; urgency=low
+
+  * New upstream version.
+  * IGNORECASE removed from awk calls. Closes: #366073
+  * debconf dependency removed. Closes: #375232 
+  * added example for keychain integration into Xsession. Thanks to Simon McVittie. Closes: #336484
+  * Confirm patch added to keychain upstream. Thanks to Liyang HU <liyang@nerv.cx> for the patch. Closes: #296382
+
+ -- Cesar Mendoza <mendoza@debian.org>  Tue, 9 May 2006 09:09:13 -0600
+
+
+keychain (2.5.5-5) unstable; urgency=low
+
+  * the package now suggests gnupg-agent. Closes: #336159
+
+ -- Cesar Mendoza <mendoza@debian.org>  Mon, 31 Oct 2005 14:26:34 -0600
+
+keychain (2.5.5-4) unstable; urgency=low
+
+  * added | debconf-2.0 to Depend field.
+
+ -- Cesar Mendoza <mendoza@debian.org>  Thu, 28 Sep 2005 14:01:03 -0600
+
+
+keychain (2.5.5-3) unstable; urgency=low
+
+  * Fix bugs in handling of DISPLAY and SSH_ASKPASS. Closes: #324950
+
+ -- Cesar Mendoza <mendoza@debian.org>  Thu, 25 Aug 2005 15:19:23 -0600
+
+keychain (2.5.5-2) unstable; urgency=low
+
+  * Now depends on openssh-client | ssh-client. Closes: #281106
+  
+ -- Cesar Mendoza <mendoza@debian.org>  Tue, 23 Aug 2005 13:26:34 -0600
+ 
+keychain (2.5.5-1) unstable; urgency=low
+
+  * New upstream version. Closes: #305281
+  * Now depends on ssh. Closes: #281106
+  * Debconf not used anymore. Closes: #235812,#298567
+  * Translations not needed any more for debconf. Closes: #301473,#312168
+  * Error in the description fixed. Closes: #285125
+  
+ -- Cesar Mendoza <mendoza@debian.org>  Tue, 23 Aug 2005 11:33:12 -0600
+ 
+keychain (2.5.1-1) unstable; urgency=low
+
+  * New upstream version. Closes: #246967
+  * l10n changes Closes: #235812,#259567,#262738,#266356,#274900,#192165
+  
+ -- Cesar Mendoza <mendoza@debian.org>  Mon, 17 Jan 2005 11:40:46 -0600
+ 
+keychain (2.4.0-1) unstable; urgency=low
+
+  * New upstream version.
+  * keychain doesn't output ssh-add messages Closes: #269722
+  
+ -- Cesar Mendoza <mendoza@debian.org>  Tue, 21 Sep 2004 14:08:29 -0600
+ 
+keychain (2.3.3-1) unstable; urgency=low
+
+  * using debconf without po-debconf fixed.
+  * New upstream version.
+  * Doesn't suggest procmail anymore
+  
+ -- Cesar Mendoza <mendoza@debian.org>  Thu, 08 Jul 2004 14:31:43 -0600
+ 
+keychain (2.0.3-2) unstable; urgency=low
+
+  * keychain dosn't recognise the running ssh-agents again Closes: #223808
+  
+ -- Cesar Mendoza <mendoza@debian.org>  Fri, 05 Dec 2003 15:30:29 -0600
+ 
+keychain (2.0.3-1) unstable; urgency=low
+
+  * New upstream version.
+  
+ -- Cesar Mendoza <mendoza@debian.org>  Fri, 05 Dec 2003 15:25:49 -0600
+ 
+keychain (2.0.2-4) unstable; urgency=low
+
+  * keychain dosn't recognise the running ssh-agents Closes: #163339
+
+ -- Cesar Mendoza <mendoza@debian.org>  Mon, 28 Oct 2002 10:32:04 -0600
+
+keychain (2.0.2-3) unstable; urgency=low
+
+  * error on keychain manpage Closes: #166328
+
+ -- Cesar Mendoza <mendoza@debian.org>  Mon, 28 Oct 2002 10:32:04 -0600
+
+keychain (2.0.2-2) unstable; urgency=low
+
+  * keychain 2.0.2 identifies itself as 2.0.1
+
+ -- Cesar Mendoza <mendoza@debian.org>  Wed, 26 Sep 2002 09:37:49 -0600
+
+keychain (2.0.2-1) unstable; urgency=low
+
+  * New upstream version, fixes problems with ssh-askpass
+
+ -- Cesar Mendoza <mendoza@debian.org>  Wed, 18 Sep 2002 16:07:27 -0600
+
+keychain (2.0.1-2) unstable; urgency=low
+
+  * removed dependency on ssh-askpass Closes: #161123
+  * keychain goes to main
+
+ -- Cesar Mendoza <mendoza@debian.org>  Thu, 17 Sep 2002 09:50:55 -0600
+
+keychain (2.0.1-1) unstable; urgency=low
+
+  * New upstream version
+  * 2.0 was skiped because of a bug in the documentation
+
+ -- Cesar Mendoza <mendoza@debian.org>  Mon, 26 Aug 2002 11:05:25 -0600
+
+keychain (1.9-2) unstable; urgency=low
+
+  * change on grep dependency Closes: #152546
+
+ -- Cesar Mendoza <mendoza@debian.org>  Wed, 10 Jul 2002 15:20:58 -0600
+
+keychain (1.9-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Cesar Mendoza <mendoza@debian.org>  Mon, 04 Mar 2002 13:14:25 -0600
+
+keychain (1.8-2) unstable; urgency=low
+
+  * New new option --local was missing in the man page.
+
+ -- Cesar Mendoza <mendoza@debian.org>  Thu, 06 Dec 2001 13:12:15 -0600
+
+keychain (1.8-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Cesar Mendoza <mendoza@debian.org>  Thu, 03 Dec 2001 09:37:06 -0600
+
+keychain (1.7-1) unstable; urgency=low
+
+  * New upstream version
+  * Added suggests procmail because of lockfile, but It will run without it.
+
+ -- Cesar Mendoza <mendoza@debian.org>  Thu, 24 Oct 2001 17:06:33 -0500
+
+keychain (1.5-1) unstable; urgency=low
+
+  * New upstream version Closes: #113781
+
+ -- Cesar Mendoza <mendoza@debian.org>  Fri, 28 Sep 2001 10:48:40 -0500
+
+keychain (1.4-1) unstable; urgency=low
+
+  * New upstream version Closes: #112967
+
+ -- Cesar Mendoza <mendoza@debian.org>  Wed, 20 Sep 2001 16:28:21 -0500
+
+keychain (1.2-2) unstable; urgency=low
+
+  * Real Author added to the copyright file
+  * Better dependencies.
+  * now works with ash as sh
+
+ -- Cesar Mendoza <mendoza@debian.org>  Wed, 12 Sep 2001 09:16:48 -0500
+
+keychain (1.2-1) unstable; urgency=low
+
+  * Initial Release. Closes: #112020
+
+ -- Cesar Mendoza <mendoza@debian.org>  Tue, 11 Sep 2001 09:13:33 -0500
+
+Local variables:
+mode: debian-changelog
+End:
